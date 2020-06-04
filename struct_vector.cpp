@@ -1,4 +1,4 @@
-// helloworld.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// struct_vector.cpp : This file contains the vector struct implementation.
 //
 
 #include <iostream>
