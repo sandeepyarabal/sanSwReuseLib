@@ -1,4 +1,4 @@
-// helloworld.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// class_vector.cpp : This file contains the vector class implementation.
 //
 
 #include <iostream>
