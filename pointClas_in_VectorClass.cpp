@@ -1,4 +1,4 @@
-// helloworld.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// put class in vetor class and iteriate.
 //
 
 #include <iostream>
