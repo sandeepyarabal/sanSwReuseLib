@@ -1,0 +1,42 @@
+
+#include <iostream>
+
+using namespace std;
+
+
+
+
+class Gas
+{
+    private :
+    int gallon;
+    public:
+    
+    void put_GAS(int valume)
+    { 
+        gallon = valume;
+        cout<<"putting gas amount "<< gallon ;
+    }
+};
+
+class Car
+{
+    public:
+    
+    void put_gas(Gas* G )
+    {
+        G->put_GAS(5);
+    }
+};
+
+int main()
+{
+    Car c;
+    Gas g;
+    Gas* ga;
+    ga = &g;
+    c.put_gas(ga);
+    cout<<"Hello World";
+
+    return 0;
+}
