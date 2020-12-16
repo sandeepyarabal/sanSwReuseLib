@@ -1,0 +1,36 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#define PACKED __attribute__ ((__packed__))
+
+  typedef struct 
+           {
+              char c;
+              int i;
+           } my_unpacked_struct;
+          
+       typedef struct 
+            {
+               char c;
+               int  i;
+               my_unpacked_struct s;
+            }PACKED my_packed_struct;
+int main()
+{
+     my_packed_struct ss= { 'a', 5, {'b',6}};
+     my_packed_struct* sp;
+     sp = &ss;
+    printf("Hello World \n");
+    
+    printf("%d \n ", sizeof(ss));
+    printf("%c %d %c %d  \n ",ss.c,ss.i, ss.s.c,ss.s.i );
+    printf("%c %d %c %d  \n ",sp->c,sp->i, sp->s.c,sp->s.i );
+    
+    return 0;
+}
