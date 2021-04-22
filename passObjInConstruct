@@ -1,0 +1,71 @@
+#include <iostream>
+
+using namespace std;
+
+
+
+
+class window
+{
+public:
+   
+    virtual void DrawRect() = 0;
+
+protected:
+
+private:
+
+   
+  
+};
+
+class IconWindow:public window
+{
+public:
+    void DrawRect()
+    {
+       
+    
+        cout << "DrawRectBorder" << "\n";
+       
+    }
+
+   
+};
+
+class TransientWindow :public window
+{
+public:
+    void DrawCloseBox()
+    {
+        cout << "DrawCloseBox" << "\n";
+       
+    }
+
+};
+
+class DrawWindow
+{
+public:
+    DrawWindow(window* win)
+    {
+        wind = win;
+    }
+    void Draw()
+    {
+        wind->DrawRect();
+    }
+private:
+
+    window* wind;
+
+};
+
+int main()
+{
+    window* win = new IconWindow();
+    DrawWindow DW(win);
+    DW.Draw();
+
+    std::cout << "Hello World!\n";
+}
