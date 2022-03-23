@@ -53,5 +53,14 @@ int main()
    data = 0;
    data = data |BIT_0 |BIT_1;
    printf("\n data = %d \n",data);
+
+   data =15;
+   data = data & (~BIT_1) ;
+   printf("\n data = %d \n",data);
+    
+   data =15; 
+   data &= ~(BIT_1 | BIT_2 );
+   printf("\n data = %d \n",data);
+   
     return 0;
 }
