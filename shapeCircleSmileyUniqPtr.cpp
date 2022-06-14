@@ -81,7 +81,8 @@ int main()
 	else {
 		cout << "dynamic circle";
 	}
-
+        unique_ptr<shape> utr (new triangle(3,3));
+        utr->draw();
 
 	vector<unique_ptr<shape>> v;
 	
