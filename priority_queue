@@ -53,5 +53,12 @@ int main() {
 	pq.pop();
 	printf("%s has %d $\n", name.c_str(), score);
 
+
+        /*iterate */
+        while (!pq.empty()) {
+        auto &[score, name] = pq.top(); 
+        cout << score<<name;
+        pq.pop();
+    }
 	return 0;
 }
